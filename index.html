@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<title>Solution for Technigo Coding Challenge</title>
+</head>
+<body>
+	<header>
+		<h1>Node.js - a JavaScript runtime built on Chrome's V8 JavaScript engine</h1>
+	</header>
+	<div class="container">
+		<h2>Overview</h2>
+		<div class="description">
+			<p>Node.js is an open-source and cross-platform JavaScript environment that runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. With the release of Node.js the JavaScript language can be used for both frontend and backend development. Node.js operates on a single-thread, using non-blocking I/O calls, allowing it to support tens of thousands of concurrent connections held in the event loop. In traditional web serving techniques each connection (request) spawns a new thread, taking up system RAM and eventually maxing-out at the amount of RAM available. Node.js shines in building fast and scalable network applications, as it’s capable of handling a huge number of simultaneous connections with high throughput, which equates to high scalability.</p>
+		</div>
+		<h2>Sample code</h2>
+		<div class="description">
+				<pre>
+<code class="language-js">const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+						
+const server = http.createServer((req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Content-Type', 'text/plain');
+	res.end('Hello World\n');
+});
+						
+server.listen(port, hostname, () => {
+	console.log(`Server running at http://${hostname}:${port}/`);
+});</code></pre>
+		</div>
+		<h2>Resources</h2>
+		<div class="links">
+			<a href="https://nodejs.org/en/" target="_blank">nodejs.org</a>
+			<a href="https://nodejs.dev/" target="_blank">nodejs.dev</a>
+			<a href="https://www.smashingmagazine.com/2019/02/node-api-http-es6-javascript/" target="_blank">smashingmagazine.com</a>
+		</div>
+	</div>
+	<script src="scripts/prism.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+</body>
+</html>
